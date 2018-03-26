@@ -41,6 +41,7 @@ public class Controller implements Initializable{
     static MediaPlayer player = new MediaPlayer(media);
     static ArrayList<String> listMusic = Function.getListFile(new File("Music"));
 
+    //tìm kiếm vị trí bài hát trong list nhạc
     private int searchIndexFromList(String URIMusic){
         for(int i=0; i<listMusic.size(); i++){
             if(URIMusic.equals(listMusic.get(i))) return i;
@@ -48,6 +49,7 @@ public class Controller implements Initializable{
         return -1;
     }
 
+    //Tự động next bài hát
     private void autoNextSong(){
         if(sliderTime.getValue()==sliderTime.getMax()){
             int index = this.searchIndexFromList(player.getMedia().getSource());
@@ -121,6 +123,7 @@ public class Controller implements Initializable{
         }
     }
 
+    //Phát nhạc và chạy slidertime
     public void start(){
         double duration = player.getMedia().getDuration().toSeconds();
         sliderTime.setValue(player.getCurrentTime().toSeconds());
@@ -139,6 +142,7 @@ public class Controller implements Initializable{
         sliderVolume.setVisible(true);
     }
 
+    //Cài đặt hiển thị mức độ loa
     private void setShowVolume(){
         if(sliderVolume.getValue() >= 0.75){
             btnSoundMax.setVisible(true);
@@ -173,13 +177,15 @@ public class Controller implements Initializable{
         }
     }
 
+    //Bắt sự kiện tăng giảm volume
     public  void slidervolume(MouseEvent event){
         player.setVolume(sliderVolume.getValue());
-        System.out.println(sliderVolume.getValue());
         setShowVolume();
     }
 
+    //Bắt sự kiện khi nhấn chuột slider time
     public void slidertime(MouseEvent event){
+        //tua nhạc đến vị trí tương ứng
         player.seek(Duration.seconds(sliderTime.getValue()));
 
     }
@@ -225,6 +231,7 @@ public class Controller implements Initializable{
 
     }
 
+    //Chuyển bài nhạc tiếm theo trong list nhạc
     public void Next(ActionEvent event){
         int index = this.searchIndexFromList(player.getMedia().getSource());
         if(index < listMusic.size()-1){
@@ -302,7 +309,7 @@ public class Controller implements Initializable{
     }
 
 
-
+    //Bắt sự kiện khi chọn bài hát trên listview
     public void listViewEven(MouseEvent event){
         int index = listView.getSelectionModel().getSelectedIndex();
         media = new Media(listMusic.get(index));

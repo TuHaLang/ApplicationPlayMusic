@@ -13,6 +13,7 @@ import java.util.Map;
 
 public class Function {
 
+    //Chọn directory
     public static File getNameDirectory() {
         //khởi tạo directory
         DirectoryChooser directoryChooser = new DirectoryChooser();
@@ -43,20 +44,24 @@ public class Function {
         return null;
     }
 
+    //Chuyển từ URI sang tên bài hát trả về 1 list
     public static ArrayList<String> URItoName(ArrayList<String> listURI){
         ArrayList<String> listName = new ArrayList<>();
         for(String uri : listURI){
+            //Tách chuỗi chỉ lẫy tên bài hát
             String[] list = uri.split("/");
             listName.add(list[list.length-1]);
         }
         return listName;
     }
 
+    //chuyển uri sang tên trả về 1 tên
     public static String URItoName(String URI){
         String[] list = URI.split("/");
         return list[list.length-1];
     }
 
+    //Định dạng thời gian hiển thị
     public static String formatTime(Double seconds){
         int minute = (int) (seconds/60);
         int second = (int) (seconds%60);
