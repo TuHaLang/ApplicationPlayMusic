@@ -1,0 +1,92 @@
+.buttonPlay{
+    -fx-background-image: url("play.png");
+    -fx-background-color: rgba(255,255,255,0.0);;
+}
+.buttonPause{
+    -fx-background-image: url("pause1.png");
+    -fx-background-color: rgba(255,255,255,0.0);;
+}
+.buttonBack{
+    -fx-background-image: url("back.png");
+    -fx-background-color: rgba(255,255,255,0.0);;
+}
+.buttonNext{
+    -fx-background-image: url("next.png");
+    -fx-background-color: rgba(255,255,255,0.0);;
+}
+.buttonSeekN{
+    -fx-background-image: url("seekNext.png");
+    -fx-background-color: rgba(255,255,255,0.0);;
+}
+.buttonSeekB{
+    -fx-background-image: url("seekBack.png");
+    -fx-background-color: rgba(255,255,255,0.0);;
+}
+
+.panelroot{
+    -fx-background-image: url("panelroot.png");
+}
+
+.panlbody{
+    -fx-background-image: url("musiclable1.png");
+}
+.buttonIconBack{
+    -fx-background-image: url("iconBack.png");
+    -fx-background-color: rgba(255,0,0,0.0);;
+}
+.buttonIconNext{
+    -fx-background-image: url("iconNext.png");
+    -fx-background-color: rgba(255,0,0,0.0);
+}
+.list-view{
+    -fx-background-color: rgba(0,0,0,0.0);
+}
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: linear-gradient(#328BDB 0%, #207BCF 25%, #1973C9 75%, #0A65BF 100%);
+    -fx-text-fill: white;
+    -fx-background-color: rgba(0,0,0,0.0);
+}
+
+.list-cell:odd {
+    -fx-cell-hover-color: #0093ff;
+    -fx-background-color: white;
+    -fx-background-color: rgba(0,0,0,0.0);
+}
+
+.list-cell:filled:hover {
+    -fx-cell-hover-color: #0093ff;
+    -fx-text-fill: white;
+    -fx-background-color: rgba(0,0,0,0.0);
+}
+
+.list-cell{
+    -fx-background-color: rgba(0,0,0,0.0);
+    -fx-text-fill: #ff44d5;
+    -fx-font-size: 16;
+}
+
+.buttonSound{
+    -fx-background-image: url("icon-sound.png");
+    -fx-background-color: rgba(0,0,0,0.0);
+}
+
+.buttonchoosefile{
+    -fx-background-image: url("icon-choosefile.png");
+    -fx-background-color: rgba(0,0,0,0.0);
+}
+
+.buttonsoundMin{
+    -fx-background-image: url("icon-soundMin.png");
+    -fx-background-color: rgba(0,0,0,0.0);
+}
+
+.buttonsoundMax{
+    -fx-background-image: url("icon-soundMax.png");
+    -fx-background-color: rgba(0,0,0,0.0);
+}
+
+.buttonsoundMute{
+    -fx-background-image: url("icon-soundMute.png");
+    -fx-background-color: rgba(0,0,0,0.0);
+}
+

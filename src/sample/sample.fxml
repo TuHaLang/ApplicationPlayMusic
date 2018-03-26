@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="306.0" styleClass="panelroot" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <GridPane layoutX="27.0" layoutY="376.0" prefHeight="51.0" prefWidth="255.0" styleClass="panelroot">
+         <children>
+            <StackPane prefHeight="50.0" prefWidth="78.0" GridPane.columnIndex="2">
+               <children>
+                  <Button fx:id="btnPause" mnemonicParsing="false" onAction="#Pause" prefHeight="58.0" prefWidth="51.0" styleClass="buttonPause" visible="false" />
+                  <Button fx:id="btnPlay" mnemonicParsing="false" onAction="#Play" prefHeight="51.0" prefWidth="51.0" styleClass="buttonPlay" />
+               </children>
+            </StackPane>
+            <Button mnemonicParsing="false" onAction="#SeekN" prefHeight="56.0" prefWidth="51.0" styleClass="buttonSeekN" GridPane.columnIndex="4" />
+            <Button mnemonicParsing="false" onAction="#SeekB" prefHeight="59.0" prefWidth="51.0" styleClass="buttonSeekB" />
+            <Button mnemonicParsing="false" onAction="#Back" prefHeight="59.0" prefWidth="51.0" styleClass="buttonBack" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#Next" prefHeight="55.0" prefWidth="51.0" styleClass="buttonNext" GridPane.columnIndex="3" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Pane fx:id="pane" layoutX="1.0" layoutY="44.0" prefHeight="271.0" prefWidth="306.0" styleClass="panlbody">
+         <children>
+            <Slider fx:id="sliderVolume" layoutX="275.0" layoutY="7.0" onMousePressed="#slidervolume" orientation="VERTICAL" prefHeight="99.0" prefWidth="14.0" visible="false" />
+         </children></Pane>
+      <StackPane prefHeight="51.0" prefWidth="64.0">
+         <children>
+            <Button fx:id="btnNext" mnemonicParsing="false" onAction="#buttonNext" prefHeight="51.0" prefWidth="54.0" styleClass="buttonIconNext" visible="false" />
+            <Button fx:id="btnBack" mnemonicParsing="false" onAction="#buttonBack" prefHeight="51.0" prefWidth="54.0" styleClass="buttonIconBack" />
+         </children>
+      </StackPane>
+      <Slider fx:id="sliderTime" layoutX="64.0" layoutY="342.0" onMousePressed="#slidertime" prefHeight="14.0" prefWidth="181.0" />
+      <Label fx:id="lblCurentTime" layoutX="13.0" layoutY="335.0" prefHeight="29.0" prefWidth="39.0" text="00:00" textFill="#f7f2f2">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalTime" layoutX="253.0" layoutY="335.0" prefHeight="29.0" prefWidth="39.0" text="00:00" textFill="#f7f2f2">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNameMusic" layoutX="63.0" layoutY="14.0" prefHeight="37.0" prefWidth="181.0" textFill="#f2eded">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listView" layoutX="1.0" layoutY="55.0" onMousePressed="#listViewEven" prefHeight="259.0" prefWidth="306.0" visible="false" />
+      <StackPane layoutX="267.0" layoutY="11.0" prefHeight="31.0" prefWidth="31.0">
+         <children>
+            <Button fx:id="btnSound" mnemonicParsing="false" onAction="#btnVolume" prefHeight="31.0" prefWidth="32.0" styleClass="buttonSound" visible="false" />
+            <Button fx:id="btnChoose" mnemonicParsing="false" onAction="#ChooseFile" prefHeight="38.0" prefWidth="31.0" styleClass="buttonchoosefile" visible="false" />
+            <Button fx:id="btnSoundMin" mnemonicParsing="false" onAction="#btnVolume" prefHeight="44.0" prefWidth="31.0" styleClass="buttonsoundMin" visible="false" />
+            <Button fx:id="btnSoundMax" mnemonicParsing="false" onAction="#btnVolume" prefHeight="36.0" prefWidth="31.0" styleClass="buttonsoundMax" />
+            <Button fx:id="btnSoundMute" mnemonicParsing="false" onAction="#btnVolume" prefHeight="36.0" prefWidth="31.0" styleClass="buttonsoundMute" visible="false" />
+         </children>
+      </StackPane>
+   </children>
+</Pane>
